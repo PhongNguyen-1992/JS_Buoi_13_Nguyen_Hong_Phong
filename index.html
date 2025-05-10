@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buoi_13_Nguyen_Hong_Phong</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- Bài 1 -->
+    <section class="mx-10 my-10 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg max-w-3xl">
+    <!-- Tiêu đề -->
+    <h1 class="text-3xl font-bold text-blue-600 mb-6">Bài 1: Quản Lý Tuyển Sinh</h1>
+
+    <!-- Điểm Chuẩn -->
+    <div class="mb-6">
+        <label for="totalNumber" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">Điểm Chuẩn</label>
+        <input type="number" id="totalNumber" placeholder="Nhập Điểm Chuẩn"
+            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <!-- Điểm các môn -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <div>
+            <label for="number1" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">Điểm Môn 1</label>
+            <input type="number" id="number1" placeholder="Điểm Môn 1"
+                class="w-full p-2 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+            <label for="number2" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">Điểm Môn 2</label>
+            <input type="number" id="number2" placeholder="Điểm Môn 2"
+                class="w-full p-2 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+            <label for="number3" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">Điểm Môn 3</label>
+            <input type="number" id="number3" placeholder="Điểm Môn 3"
+                class="w-full p-2 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-blue-500">
+        </div>
+    </div>
+
+    <!-- Khu Vực -->
+    <div class="mb-6">
+        <label for="khu_vuc" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">Chọn Khu Vực</label>
+        <select id="khu_vuc"
+            class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+            <option value="0" selected>Chọn Khu Vực</option>
+            <option value="2">A</option>
+            <option value="1">B</option>
+            <option value="0.5">C</option>
+        </select>
+    </div>
+
+    <!-- Đối Tượng -->
+    <div class="mb-6">
+        <label for="doi_tuong" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">Chọn Đối Tượng</label>
+        <select id="doi_tuong"
+            class="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+            <option value="0" selected>Chọn Đối Tượng</option>
+            <option value="2.5">1</option>
+            <option value="1.5">2</option>
+            <option value="1">3</option>
+        </select>
+    </div>
+
+    <!-- Nút Submit -->
+    <button type="button"
+        class="w-full sm:w-auto px-6 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition"
+        onclick="BTN1()">Submit</button>
+
+    <!-- Thông báo -->
+    <p id="noti" class="mt-5 text-lg font-semibold text-green-600 dark:text-green-400"></p>
+</section>
+<!-- Bài 3 -->
+ <section class="mx-10 my-10 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg max-w-3xl">
+    <!-- Tiêu đề -->
+    <h1 class="text-3xl font-bold text-blue-600 mb-6">Bài 3:Thuế Thu Nhập Cá Nhân</h1>
+
+    <!-- Họ Và Tên -->
+    <div class="mb-6">
+        <label for="totalNumber" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">Nhập Họ Và Tên</label>
+        <input type="text" id="name" placeholder="Nhập Họ Và Tên"
+            class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <!-- Thu Nhập -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <div>
+            <label for="number1" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">Tổng Thu Nhập Năm</label>
+            <input type="number" id="totalPrice" placeholder="Tổng Thu Nhập Năm"
+                class="w-full p-2 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-blue-500"
+                >
+        </div>
+        <div>
+            <label for="number2" class="block text-sm font-medium text-gray-700 dark:text-white mb-1">Số Người Phụ Thuộc</label>
+            <input type="number" id="phuThuoc" placeholder="Số Người Phụ Thuộc"
+                class="w-full p-2 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-blue-500">
+        </div>
+        
+    </div>
+    
+
+    <!-- Nút Submit -->
+    <button type="button"
+        class="w-full sm:w-auto px-6 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-sm font-medium transition"
+        onclick="BTN3()">Submit</button>
+
+    <!-- Thông báo -->
+    <p id="noti3" class="mt-5 text-lg font-semibold text-green-600 dark:text-green-400"></p>
+</section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
